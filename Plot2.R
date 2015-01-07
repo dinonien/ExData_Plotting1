@@ -2,11 +2,11 @@
 ## Coursera : Exploratory Data Analysis
 ## Course Project 1
 ## Author: Dino N.
-## Filename. Plot1.R
+## Filename. Plot2.R
 ###########################################################
 
 # This code loads dataset "Electric Power Consumption" available from UC Irvine Machine Learning Repository 
-# and plots Histogramm Global Active Power.
+# and plots Global Active Power Line chart for 2 days.
 # Please make sure file household_power_consumption.txt is in your workspace.
 
 # Load file household_power_consumption.txt
@@ -18,16 +18,19 @@ power <- transform(power,Date = as.Date(Date,"%d/%m/%Y"))
 power <- (subset(power,Date >= "2007-02-01" & Date < "2007-02-03"))
 
 # Create new Column for plotting graphs easier
-power$DateTime <- as.POSIXct(paste(power$Date, power$time), format="%Y-%m-%d %H:%M:%S")
+power$DateTime <- as.POSIXct(paste(power$Date, power$Time), format="%Y-%m-%d %H:%M:%S")
 
 #Open PNG file
-png(file = "./ExData_Plotting1/plot1.png", width = 480, height = 480, units="px")
+png(file = "./ExData_Plotting1/plot2.png", width = 480, height = 480, units="px")
 
-# Draw histogramm according to assignment requirements
-hist(as.numeric(power$Global_active_power),main = "Global Active Power", 
-     xlab = "Global Active Power (kilowatts)", col = "red")
+# Draw line diagram according to assignment requirements
+with(power, {
+    plot(DateTime,Global_active_power,type="n", ylab = "Global Active Power (kilowatts)", xlab = "")
+    lines(DateTime,Global_active_power)
+})
 
 #Close PNG file
 dev.off()
+
 
 
