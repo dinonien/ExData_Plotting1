@@ -4,12 +4,12 @@ This is Assignment Project 1 for Exploratory Data Analysis
 
 ## Contents
       
-PNG Image Files
----------------
-Plot 1
-Plot 2
-Plot 3
-Plot 4
+<b>PNG Image Files:</b>
+
+plot1.png
+plot2.png
+plot3.png
+plot4.png
 
 R-Code Files
 --------------
