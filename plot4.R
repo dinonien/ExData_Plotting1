@@ -40,7 +40,7 @@ with(power, {
     lines(DateTime,Sub_metering_2, col = "red" )
     lines(DateTime,Sub_metering_3, col = "blue" )
     legend("topright", pch = "", lwd = 1,    col = c("black", "red", "blue"), 
-           legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3" ))
+           legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3" ), bty = "n")
     
     #Line Graph Global Reactive Power
     plot(DateTime,Global_reactive_power,type="n", ylab = "Global_reactive_power", xlab = "datetime")
