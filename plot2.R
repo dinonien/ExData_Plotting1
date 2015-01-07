@@ -2,7 +2,7 @@
 ## Coursera : Exploratory Data Analysis
 ## Course Project 1
 ## Author: Dino N.
-## Filename. Plot2.R
+## Filename. plot2.R
 ###########################################################
 
 # This code loads dataset "Electric Power Consumption" available from UC Irvine Machine Learning Repository 
