@@ -2,11 +2,11 @@
 ## Coursera : Exploratory Data Analysis
 ## Course Project 1
 ## Author: Dino N.
-## Filename. Plot3.R
+## Filename. plot3.R
 ###########################################################
 
 # This code loads dataset "Electric Power Consumption" available from UC Irvine Machine Learning Repository 
-# and plots Global Active Power Line chart for 2 days.
+# and plots Sub_metering chart for 2 days.
 # Please make sure file household_power_consumption.txt is in your workspace.
 
 # Load file household_power_consumption.txt
@@ -14,7 +14,7 @@ power <- read.table("./household_power_consumption.txt", stringsAsFactors = FALS
 
 # Transform Date Column to Date Format
 power <- transform(power,Date = as.Date(Date,"%d/%m/%Y"))
-# Subset to the dates 2007-02-01 and 2007-02-03
+# Subset to the dates 2007-02-01 and 2007-02-02
 power <- (subset(power,Date >= "2007-02-01" & Date < "2007-02-03"))
 
 # Create new Column for plotting graphs easier

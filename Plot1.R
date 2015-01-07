@@ -14,7 +14,7 @@ power <- read.table("./household_power_consumption.txt", stringsAsFactors = FALS
 
 # Transform Date Column to Date Format
 power <- transform(power,Date = as.Date(Date,"%d/%m/%Y"))
-# Subset to the dates 2007-02-01 and 2007-02-03
+# Subset to the dates 2007-02-01 and 2007-02-02
 power <- (subset(power,Date >= "2007-02-01" & Date < "2007-02-03"))
 
 # Create new Column for plotting graphs easier
